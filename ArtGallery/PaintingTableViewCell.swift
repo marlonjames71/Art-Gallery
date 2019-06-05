@@ -10,15 +10,26 @@ import UIKit
 
 class PaintingTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+	var painting: Painting? {
+		didSet {
+			updateViews()
+		}
+	}
+	
+	func updateViews() {
+		if let painting = painting {
+			paintingImageView.image = painting.image
+			if painting.isLiked  == true {
+				likeDislikeButton.setTitle("Unlike", for: .normal)
+			}
+		}
+	}
+	
+	@IBOutlet var paintingImageView: UIImageView!
+	@IBOutlet var likeDislikeButton: UIButton!
+	
+	
+	@IBAction func likeButtonTapped(_ sender: UIButton) {
+	}
+	
 }
