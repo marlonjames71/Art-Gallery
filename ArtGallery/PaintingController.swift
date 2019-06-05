@@ -14,7 +14,7 @@ class PaintingController {
 	var paintings: [Painting] = []
 	
 	func loadPaintsFromAssets() {
-		for painting in 0...12 {
+		for painting in 1...12 {
 			let paintingName = "Image\(painting)"
 			guard let unwrappedPainting = UIImage(named: paintingName) else { return }
 			let newPainting = Painting(image: unwrappedPainting)
