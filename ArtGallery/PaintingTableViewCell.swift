@@ -21,10 +21,12 @@ class PaintingTableViewCell: UITableViewCell {
 	}
 	
 	func updateViews() {
-		if let painting = painting {
-			paintingImageView.image = painting.image
-			if painting.isLiked  == true {
+		if let selectedPainting = painting {
+			paintingImageView.image = selectedPainting.image
+			if selectedPainting.isLiked  == true {
 				likeDislikeButton.setTitle("Unlike", for: .normal)
+			} else if selectedPainting.isLiked == false {
+				likeDislikeButton.setTitle("Like", for: .normal)
 			}
 		}
 	}

@@ -34,20 +34,16 @@ extension PaintingListViewController: UITableViewDataSource, UITableViewDelegate
 		
 		let painting = paintingController.paintings[indexPath.row]
 		cell.painting = painting
-		
+		cell.delegate = self
 		return cell
 	}
 }
 
 extension PaintingListViewController: PaintingTableViewCellDelegate {
 	func likeButtonWasTapped(on cell: PaintingTableViewCell) {
-		paintingListTableView.indexPath(for: PaintingTableViewCell)
-		
-		let likeStatus = painting
-		
-paintingController.toggleIsLiked(for: likeStatus)
-		
-		
-		
+		if let indexPath = paintingListTableView.indexPath(for: cell) {
+			paintingController.toggleIsLiked(for: paintingController.paintings[indexPath.row])
+			paintingListTableView.reloadRows(at: [indexPath], with: .none)
+		}
 	}
 }

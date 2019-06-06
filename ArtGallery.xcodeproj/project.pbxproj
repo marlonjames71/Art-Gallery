@@ -70,9 +70,9 @@
 			children = (
 				469AAC41210258C200C0D421 /* AppDelegate.swift */,
 				37D5194A22A8639F0090FC86 /* PaintingTableViewCell.swift */,
+				37D5194722A851BA0090FC86 /* PaintingController.swift */,
 				37D5194C22A86A6F0090FC86 /* PaintingListViewController.swift */,
 				469AAC45210258C200C0D421 /* Main.storyboard */,
-				37D5194722A851BA0090FC86 /* PaintingController.swift */,
 				37D5194922A851C40090FC86 /* Model */,
 				469AAC48210258C300C0D421 /* Assets.xcassets */,
 				469AAC4A210258C300C0D421 /* LaunchScreen.storyboard */,

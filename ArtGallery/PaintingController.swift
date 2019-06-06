@@ -27,10 +27,11 @@ class PaintingController {
 	}
 	
 	func toggleIsLiked(for painting: Painting) {
-		if painting.isLiked == true {
+		if painting.isLiked == false {
 			painting.isLiked = true
-		} else {
+		} else if painting.isLiked == true {
 			painting.isLiked = false
 		}
+		
 	}
 }
