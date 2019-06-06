@@ -41,7 +41,13 @@ extension PaintingListViewController: UITableViewDataSource, UITableViewDelegate
 
 extension PaintingListViewController: PaintingTableViewCellDelegate {
 	func likeButtonWasTapped(on cell: PaintingTableViewCell) {
-		guard let liked = cell.painting?.isLiked else { return }
+		paintingListTableView.indexPath(for: PaintingTableViewCell)
+		
+		let likeStatus = painting
+		
+paintingController.toggleIsLiked(for: likeStatus)
+		
+		
 		
 	}
 }
